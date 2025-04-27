@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "test_task"
+version = "0.1.0"
+description = ""
+authors = ["Roman Balyuk"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+pytest = "8.3.4"
+assertpy = "1.1"
+requests = "2.32.3"
+python-dotenv = "1.0.1"
+allure-pytest = "2.13.5"
+playwright = "1.51.0"
+pydantic-settings = "2.9.1"
+pytest-playwright = "0.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black="25.1.0"
+ruff="0.11.7"
+flake8="7.1.1"
+isort="6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
