@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import uuid
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Callable
 
 import allure
 import pytest
@@ -12,6 +12,8 @@ from utils.config import Config
 
 if TYPE_CHECKING:
     from playwright.sync_api import Page, Playwright
+
+    from entities.pages.base_page import BasePage
 
 
 @pytest.fixture()
@@ -38,7 +40,7 @@ def browser_page(playwright: Playwright, config: Config) -> Page:  # noqa
 
 
 @pytest.fixture()
-def get_page(browser_page):
+def get_page(browser_page) -> Callable[[type[BasePage]], ...]:
     def _get_page(page_class):
         return page_class(browser_page)
 
