@@ -14,7 +14,6 @@ requests = "2.32.3"
 python-dotenv = "1.0.1"
 allure-pytest = "2.13.5"
 playwright = "1.51.0"
-pydantic-settings = "2.9.1"
 pytest-playwright = "0.7.0"
 
 [tool.poetry.group.dev.dependencies]
